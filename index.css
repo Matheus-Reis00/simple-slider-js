@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #060606;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* //////////////////////// SLIDER ///////////////////// */
+
+#container-blocks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blocks {
+    width: 540px;
+    height: 300px;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.block {
+    width: 150px;
+    height: 250px;
+    opacity: .4;
+    flex: none;
+    transition: 1s; /* Tempo que levará para a animação de giro terminar. Sem esse transisiton a animação não funciona */
+    border: 10px solid white;
+
+}
+
+.center {
+    transform: rotate3d(0, 1, 0, 180deg); /* animação de giro dos blocos. Altere o ultimo campo (180deg) multiplicando por 2, 3, etc.. para alterar quantidade de giros */
+    width: 200px;
+    height: 300px;
+    opacity: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#button, #button2 {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer ;
+    border-radius: 50%;
+}
+
+#button:hover, #button2:hover {
+    background-color: rgb(165, 165, 165);
+    color: white;
+}
+
+
+#button::before {
+    content: '>';
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 5px;
+}   
+
+#button2::before {
+    content: '<';
+    font-size: 50px;
+    font-weight: bolder;
+    margin-right: 5px;
+
+}
+
+.blue{background-color: blue;}
+.red{background-color: red;}
+.green{background-color: green;}
+.yellow{background-color: yellow;}
+.purple{background-color: purple;}
+.orange{background-color: orange;}
+.aqua{background-color:aqua}
+
+/* ////////////////////////////// CIRCULOS LOCALIZADORES /////////////////////////////// */
+
+#circles {
+    width: 150px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color:#606060;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.active {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    transform: rotate3d(0, 1, 0, 180deg);
+}
